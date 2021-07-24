@@ -85,6 +85,8 @@ you can change the path. Follows are example output from example.com
 * docker-compose >= 1.16.1
 
 ```
+$ docker-compose build
+
 terminal A
 $ docker-compose up
 
