@@ -1,0 +1,27 @@
+{
+    "download": {
+        "delay_sec": 3.0
+    },
+    "feed": {
+        "/tmp/scrape_test/test_result.json" : {
+            "format": "json",
+            "encoding": "utf8"
+        }
+    },
+    "targets": [
+        {
+            "name": "mytestpage",
+            "url": "http://test:5000/monopage",
+            "search": [
+                {
+                    "desc": "each_p",
+                    "xpath": "/html/body/div[1]/p"
+                },
+                {
+                    "desc": "title",
+                    "xpath": "/html/head/title"
+                }
+            ]
+        }
+    ]
+}
