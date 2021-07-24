@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-8kskv)hu9)+t(h@kn0zb@c+rm%herfha05kw6d9h-1f=f_)b3i
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'test'
+    'test',
+    'localhost'
 ]
 
 
@@ -41,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'monopage'
+    'monopage',
+    'manypages'
 ]
 
 MIDDLEWARE = [
@@ -60,7 +62,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            p.join(BASE_DIR, 'monopage', 'templates')
+            p.join(BASE_DIR, 'monopage', 'templates'),
+            p.join(BASE_DIR, 'manypages', 'templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {

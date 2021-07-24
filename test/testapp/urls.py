@@ -19,5 +19,6 @@ from django.urls import path
 
 urlpatterns = [
     path('monopage/', include('monopage.urls')),
+    path('manypages/', include('manypages.urls')),
     path('admin/', admin.site.urls),
 ]

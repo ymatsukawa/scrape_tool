@@ -25,6 +25,40 @@ edit `src/setttings.(prod|dev|test).json`
 
 scheme(prod, dev or test) is mapped to `.env`'s PROD, DEV or TEST
 
+<details>
+  <summary>settings.*.json edit profile</summary>
+
+[featured json is `src/settings.test.json`](./src/settings.test.json)
+
+**download**
+
+* how delays each `targets` crawl.
+* minimum unit of search is `one name, one start_url`
+
+**feed**
+
+* setting is exported from [FEEDS item](https://docs.scrapy.org/en/latest/topics/feed-exports.html#feeds)
+
+**targets**
+
+* `targets.name`
+  * unique name of crawl
+* `targets.start_url`
+  * where to start crawl
+* `targets.search.desc`
+  * key name of xpath result
+  * follows section in `run`, `each_p` and `title` is respond to this
+* `targets.search.xpath`
+  * value of xpath result
+  * also `run` section, found element is written in json value 
+* `targets.search.next_xpath_href` (optional)
+  * if crawler needs to search page, set xpath of href
+* `targets.search.max_crawl_page` (required when `next_xpath_href `is set)
+  * set how many crawl page
+  * when crawler detect page is over, exit safe automatically
+
+</details>
+
 ## run
 
 ```
