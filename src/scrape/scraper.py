@@ -25,10 +25,6 @@ class Scraper(scrapy.Spider):
                 }
             ]
         }
-
-        'next_xpath_href' is optional key.
-        when 'next_xpath_href' is set, 'max_next_page' is required.
-        scraper crawls with the href withing 'max_next_page'
     """
     def __init__(self, scrape_args):
         self.name = scrape_args['name']
