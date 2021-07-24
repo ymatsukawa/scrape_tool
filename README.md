@@ -14,16 +14,16 @@ $ pip3 install -r src/requirements.txt
 $ cp src/.env.example src/.env
 ```
 
-edit src/.env
+edit `src/.env`
 
 ```
 # PROD, DEV or TEST
 SCRAPING_ENV=DEV
 ```
 
-edit src/setttings.(prod|dev|test).json
+edit `src/setttings.(prod|dev|test).json`
 
-scheme(prod, dev or test) is mapping to .env's PROD, DEV or TEST
+scheme(prod, dev or test) is mapped to `.env`'s PROD, DEV or TEST
 
 ## run
 
@@ -31,11 +31,9 @@ scheme(prod, dev or test) is mapping to .env's PROD, DEV or TEST
 $ python3 src/main.py
 ```
 
-Result is located in src/settings.(prod|dev|test).json's `feed`.`/path/to/output_dir/file.json`.
+Result path is written in src/settings.(prod|dev|test).json's `feed`.`/path/to/output_dir/file.json`.
 
-you can change the path.
-
-Follow output are example from example.com
+you can change the path. Follows are example output from example.com
 
 ```
 [
@@ -49,7 +47,7 @@ Follow output are example from example.com
 
 ### requirements
 
-* docker 20.10.7 >=
+* docker >= 20.10.7
 * docker-compose >= 1.16.1
 
 ```
@@ -68,6 +66,6 @@ crawler crawling test web app of djnago at `test` directory
 
 about contribution:
 
-This repository is for personal use, so I don't plan to improvement by contribution.
+This repository's purpose is personal use. So I don't plan to improvement by contribution.
 
-If you want to customize, please fork thanks.
+If you want to customize, please fork. Thanks.
